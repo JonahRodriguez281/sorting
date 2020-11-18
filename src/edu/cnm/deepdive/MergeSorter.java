@@ -1,11 +1,10 @@
 package edu.cnm.deepdive;
 
-public class MergeSorter {
+import java.util.Arrays;
 
-  public void sort(int[] data) {
-    sort(data, 0, data.length);
-  }
+public class MergeSorter implements Sorter {
 
+  @Override
   public void sort(int[] data, int lowerBound, int upperBound) {
     if (upperBound > lowerBound + 1) {
       int midpoint = (upperBound + lowerBound) / 2;
